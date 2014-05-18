@@ -1,0 +1,35 @@
+body{
+	width: 700px;
+	margin-left: auto
+	margin-right: auto;
+	padding: 0px;
+}
+
+#header {
+	height: 150px;
+	width: 700px;
+	background-color: yellow;
+}
+
+#main {
+	height: 400px;
+}
+
+#content {
+	height: 400px;
+	width: 498px;
+	float: right;
+}
+
+#sidebar {
+	height: 1900px;
+	width: 198px;
+	float: left;
+	background-color: orange;
+}
+
+#footer {
+	height: 100px;
+	width: 700px;
+	background-color: yellow;
+}

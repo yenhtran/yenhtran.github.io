@@ -1,0 +1,28 @@
+body{
+	background-color: silver;
+	padding: 30px;
+	border: 1px black;
+}
+
+#header {
+	background-color: teal;
+	text-align: center;
+	font-size: 20px;
+	font-family: Arial;
+	padding: 10px;	
+}
+
+#container {
+	background-color: silver;
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+}
+
+#footer {
+	background-color: teal;
+	text-align: center;
+	font-size: 15px;
+	font-family: Arial;
+	padding: 10px;
+}
