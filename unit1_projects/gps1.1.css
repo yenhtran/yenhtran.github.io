@@ -1,0 +1,30 @@
+header{
+  text-align: center;
+  background: navy;
+  color: white;
+}
+      
+aside{
+  float: left;
+   width: 30%;
+}
+      
+section{
+  float: right;
+  width: 70%;
+}
+    
+footer{
+  clear: both;
+  text-align: center
+}
+    
+#wrapper{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+    
+.reflection{
+  background: silver;
+}
