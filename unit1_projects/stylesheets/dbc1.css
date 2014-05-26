@@ -1,11 +1,76 @@
-body {
-	background: silver;
-	font-family: arial;
+#container{
+	width: 100%;
+	background-color: black;
+}
+
+#nav{
+	background-color: black;
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+#nav-wrapper{
+	width: 100%;
+	margin: 0 auto;
 	text-align: center;
 }
 
-p {
-	background: teal;
-	color: white;
-	padding: 10px;
+#nav ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
 }
+
+#nav ul li{
+	display: inline-block;
+}
+#nav ul li:hover{
+	background-color: #333;
+}
+#nav ul li a,visted{
+	display: block;
+	padding: 15px;
+	color: #CCC;
+	text-decoration: none;
+}
+
+aside{
+	float: left;
+	width: 40%;
+	height: 100%;
+	background: black;
+	font-family: arial;
+	color: white;
+	padding: 20px;
+	padding-bottom: 80px;
+}
+
+section{
+	float: right;
+	background: black;
+	text-align: center;
+	width: 35%;
+	padding-top: 50px;
+	padding-left: 20%;
+} 
+
+footer{
+	clear: both;
+	background-color: black;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	color: white;
+	padding: 20px;
+	text-align: center;
+	font-family: Arial;
+	margin: 0 auto;
+}
+
+
+
+
+
+
+
