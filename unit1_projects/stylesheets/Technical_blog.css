@@ -1,7 +1,8 @@
-body{
+#container {
 	background-color: silver;
-	padding: 30px;
-	border: 1px black;
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
 }
 
 #header {
@@ -12,13 +13,6 @@ body{
 	padding: 10px;	
 }
 
-#container {
-	background-color: silver;
-	margin-left: auto;
-	margin-right: auto;
-	width: 700px;
-}
-
 #footer {
 	background-color: teal;
 	text-align: center;
@@ -26,3 +20,19 @@ body{
 	font-family: Arial;
 	padding: 10px;
 }
+
+body{
+	background-color: silver;
+	padding: 30px;
+	border: 1px black;
+}
+
+h2{
+	text-align: center;
+}
+
+img{
+	width: 100%;
+}
+
+
