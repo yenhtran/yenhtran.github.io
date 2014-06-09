@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Yen's Technical Blog, Week 4</title>
+		<link rel="stylesheet" href="stylesheets/Technical_blog.css">
+	</head>
+
+		<body>
+		<div id="container">
+			<div id="header">
+				<h1>Yen Tran</h1>
+				<p> Tech Blog</p>
+				<p> June, 2014</p>
+			</div>
+
+		<h2>Enumerables</h2>
+
+		<p>This blog will attempt to explain three very useful enumerables that are often used in Ruby.</p>
+
+		<p>But first, <strong>What is an Enumerable?</strong></p>
+		<p>A "enumerable" is Ruby's way of saying that we can get elements out of a collection, one at a time. (aka- an "external iterator" or what I like to call the 'Looper') A "enumrator", then, is the tool we use to get elemen out of a collection, one at a time.</p> 
+		<p>Referenced from: <a href="http://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/44-collections/lessons/96-enumerators-and-enumerables" target="_blank">rubymonk.com</a></p>
+
+		<h3>Enumerable#map</h3>
+		
+		<p><strong>What it does: </strong>"The Enumerator#map method returns a new array with the results of running the block once for every element in the Enumerator". If no block is given, an enumerator is returned instead.</p>
+
+		<p><strong>Example: </strong>Let's say you have an array of numbers that you would like to iterate over and have it return a collection of results after running the code. You can apply a map method and it would return such a collection.</p>
+
+		<img src="images/Wk4_Techblog_map.png"></a></br>
+
+		<h3>Enumerable#group_by</h3>
+		
+		<p><strong>What it does:</strong>"The Enumarator#group_by method is a pretty cool method once you understand what it does. What the group_by method does is groups the collection by result of the block. It returns a hash where the keys are the evaluated result from the block and the values are arrays of elements in the collection that correspond to the key." (Lost yet? Yeah, I was too. Hopefully the challenge below will help.)</p>
+
+		<p><strong>Example: </strong>Okay, let's say you have an array of numbers called num_array. Now let's say we have a block of code that we want to run and our answers are in the num_array. So what we really want is a way to 'group' the elements in the array 'by' the associated key of that answer. In the example below.</p>
+
+		<p>i % 3<p>
+		<p>0 % 3 = both 3 and 6 (from the array) fulfills this answer</p>
+		<p>1 % 3 = both 1 and 4 (from the array) fulfills this answer</p>
+		<p>2 % 3 = both 2 and 5 (from the array) fulfills this answer</p>
+
+		<p>So what group_by does is group the values by association of the key in the hash.</p>
+
+		<img src="images/Wk4_Techblog_groupby.png"></a></br>
+
+		<h3>Enumerable#cycle</h3>
+		
+		<p><strong>What it does: </strong>It runs the block of code for each element repeatedly n times (or 'cycles'). It can also run forever if nil is not specified or isn't given. If a non-positive number is given or the collection is empty, it does nothing. If no block is given, an enumerator is returned instead.</p>
+
+		<p><strong>Example:</strong></p>
+
+		<img src="images/Wk4_Techblog_cycle.png"></a></br>
+
+		<p>All Enumerable method explainations were referenced from: <a href="http://ruby-doc.org/core-2.1.2/Enumerable.html#method-i-cycle" target="_blank">Ruby-docs</a></p>
+
+		Hope this helped!</p>
+		
+		<div id="footer">
+		<a href="mailto:tran.yentran@gmail.com">contact me</a>
+	</div>
+		</body>
+</html>
