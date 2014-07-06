@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Yen's Technical Blog, Week 6</title>
+		<link rel="stylesheet" href="stylesheets/Technical_blog.css">
+	</head>
+
+		<body>
+		<div id="container">
+			<div id="header">
+				<h1>Yen Tran</h1>
+				<p> Tech Blog</p>
+				<p> June, 2014</p>
+			</div>
+
+		<h2>Blocks vs. Procs vs. Lambdas: What's the difference?</h2>
+
+		<p>This blog will attempt to explain what Blocks, Procs, and Lambdas are and how they work.</p>
+
+		<p><strong>Blocks:</strong></p>
+		If you are a beginner and have been dipping your toes into Ruby, it's very likely that you've already had some exposure to a Ruby block. Ruby blocks is that section of code between either the 'do...end' or curly braces ({}). You may have seen these blocks combined with Ruby methods like .each, .map, .times to execute instruction to collections like an array or hash. 
+
+		One of the shortcomings of blocks is that Ruby blocks ARE NOT objects. Due to this, blocks can't be saved to variables and don't have all the attributes and functionality of a typical Ruby object. For that, we need PROCS.
+
+		<p><strong>Procs:</strong></p>
+		The way I have been viewing procs are that they are "savable" blocks. Similar to how you apply a bit of code and incorporate it to a method, procs allow you to name the block of code for use later or used multiple times. By using Procs, it keeps our code DRY and prevents us from repeating ourselves by allowing us to use it many times. 
+
+		<pre><code>
+		proc_name = Proc.new {|param| code_block}
+		</pre></code>
+
+		Once we have our proc defined, we can start using our new proc by passing it to methods that normally expects a block. In order to reference a proc we would like to use, we would need add the "&" sign in front of the proc name we would like to use. 
+
+		<pre><code>
+		some_object.method(&proc_name)
+		</pre></code>
+
+		I like examples and CodeAcademy has a great one:
+
+		<pre><code>
+		cube = Proc.new {|x| x ** 3 }
+
+		[1, 2, 3].collect!(&cube)
+		# ==> [1, 8, 27]
+
+		[4, 5, 6].map!(&cube)
+		# ==> [64, 125, 216]
+		</pre></code>
+
+		To circle back, procs are objects and have all the properties that come with being an object, while blocks are not. In addition, procs can be called over and over without having to retype them everytime there is a particular block of code that needs to be excuted multiple times.
+
+		<p><strong>Lambdas:</strong></p>
+		Lambdas are very similar to procs, but they do have subtle differences. Like procs, lambdas are also objects and are usefule for the same reasons procs are useful. Both use the "&" to pass into a method. However the syntax for a lambda is slightly different:
+
+		<pre><code>
+		lambda_name = lambda {|param} code_block}
+		</pre></code>
+
+		One way I've been thinking about the difference between lambdas and procs is that lambdas seem to "follow the rules" better. There are two main differences:
+
+		<ol>
+			<li>Lambdas checks the number of arguments that are passed to it, while procs do not. If the incorrect number of arguments get passed in, it will thow an error. Procs on the other hand "will ignore the unexpected arguments and assign nil to any that are missing."
+			<li>The other main difference is "when a lambda returns, it passes control back to the calling method; when a proc returns, it does so immediately, without going back to the calling method.
+		</ol>
+
+		<p><strong>In Summary:</strong></p>
+
+		<ol>
+			<li> A block of code is a bit of code that is passed to Ruby methods. They live between "do...end" or {}.
+			<li> "Procs are saved blocks that can be called multiple times.""
+			<li> "A Lambda is just like a proc, but it cares about the number of arguments it gets and returns to its calling method rather than returning immediately."" (Procs do this.)
+		</ol>
+
+		<p>To learn more, check out <a href="http://www.codecademy.com/courses/ruby-beginner-en-L3ZCI/0/1?curriculum_id=5059f8619189a5000201fbcb" target="_blank">Blocks, Procs, and Lambdas</a> at Codeacademy. Many of these explainations came straight out of their great tutorials!</p>
+
+		<div id="footer">
+		<a href="mailto:tran.yentran@gmail.com">contact me</a>
+	</div>
+		</body>
+</html>
