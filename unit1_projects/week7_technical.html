@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Yen's Technical Blog, Week 6</title>
+		<link rel="stylesheet" href="stylesheets/Technical_blog.css">
+	</head>
+	<body>
+	<div id="container">
+		<div id="header">
+			<h1>Yen Tran</h1>
+			<p> Tech Blog</p>
+			<p> July, 2014</p>
+		</div>
+
+	<h2>SQL Injections</h2>
+
+	<p><strong>What is a SQL Injection?</strong></p>
+	<p>SQL injections is a type of web attacking technique that is used by hackers to steal information and data from organization. The way a SQL injection works is when an attacker passes SQL commands (statements) into the user input fields and is able to gain access and/or even wipe out an organization's database directly. Websites that have features that allow legitimate users to input data (i.e. login pages, request forms, feedback forms, shopping carts, etc.) are vulnerable to these attacks.</p>
+
+	<p>Let's say you have a simple login page that any legitimate user would enter their username and password to enter the site. When valid credentials are submitted and verified, the user is allowed access. However, if someone wanted to come in add maliciously effect your database, they could use a SQL injection.</p>
+
+	<p><strong>A SQL Injection Example:</strong></p>
+
+	<p>Typically, the way one talks to a database by issuing a command like this:
+
+	<pre><code>
+	SELECT * FROM Users
+		WHERE Username = "Jane"
+	</pre></code>
+
+	This command will have the database send back everything it knows about "Jane". But the catch are those quotation marks ("") becuase if we not carefull about what we send, we can cause some problems like the one below.
+
+	Lets say I submit a webform with:
+
+	<pre><code>
+	SELECT * FROM Users
+		WHERE Username = Jane"
+	</pre></code>
+
+	Notice that lone quotation mark at the end? What will happen is that the program will automatically add a set of quotation marks to the datebase like so: "Jane"". Unfortunately this will confuse the program, which in turn will return an error. The catch is you can cause a lot of problems this way. This is because SQL has many other commands to it including: INSERT (to add new data), UPDATE (to change data), and DELECT (to remove data). So if a hacker submited the following:
+
+	<pre><code>
+	SELECT * FROM Users
+		WHERE Username = Jane"; DROP ALL DATABASES
+	</pre></code>
+
+	What will happen is that SQL thinks what is behind the semicolon is a newcommand and will run said command and in this case, DELETE EVERYTHING. (And yes, at that point you may need to dust off that resume.)</p>
+
+	<p><strong>How does one combat this? PREPARED STATEMENTS</strong></p>
+
+	<p>Prepared statements is the most common way to combat this problem and all programmer should be including these in their code. What essentially it is, it's a hack. It's a hack on top of a hack, but it does keep the database safe. What it looks like is as follows:
+
+	<pre><code>
+	SELECT * FROM Users
+		WHERE Username = ?
+	</pre></code>
+
+	In a extremely simplified nutshell, what this is telling the program that the ? is data to be inserted in, not a command. No matter what the data looks like, it should be stored in the database and is not a command to be run. (Programmers should be sure the check the current security guidelines to write this.)</p>
+
+	<p>To learn more, check out this great video: <a href=https://www.youtube.com/watch?v=_jKylhJtPmI target="_blank">Hacking Websites with SQL Injection-Computerphile</a>. This explaination came straight out of Tom Scott's explaination!</p>
+
+	<div id="footer">
+		<a href="mailto:tran.yentran@gmail.com">contact me</a>
+	</div>
+
+	</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
