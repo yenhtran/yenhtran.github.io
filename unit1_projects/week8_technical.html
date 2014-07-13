@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Yen's Technical Blog, Week 8</title>
+		<link rel="stylesheet" href="stylesheets/Technical_blog.css">
+	</head>
+	
+	<body>
+	<div id="container">
+		<div id="header">
+			<h1>Yen Tran</h1>
+			<p> Tech Blog</p>
+			<p> July, 2014</p>
+		</div>
+
+	<h2>Recursion</h2>
+
+	<p>Recursion is an important concept in Computer Science and is esstionally to define something/task/operation, using that same task/operation. In other words, it is defining itself, and at the same time using itself to define itself on a smaller scale. R A recursive function is a function that calls itself and is a useful for tasks that can be defined in terms of similar subtasks.</p>
+
+	<p>In CS, this concept comes up in the way of functions</p>
+
+	<pre><code>
+			function () {
+				statment defining funtion..
+				statment defining funtion..
+				statment defining funtion..
+				function ()...
+			}
+	</code></pre>
+
+	<h2>How recursive funtions play out in code:</h2>
+
+	<p>Recursive functions are defined by 2 cases in code.
+		- a RECURSIVE CASE: call to self to perform subtask (this is where the recursion happens)
+		- a BASE CASE: a non-recursive operation (usually to prevent infinite loops)</p>
+
+	<h2>Example:</h2>
+	<pre><code>
+		Factorial Operation
+			- Recursive case: n! = n(n-1)!
+			- Base Case: 1! = 0! = 1
+
+		If n = 5, we have 
+
+			5! = 5(5-1)!
+					 4! = 4(4-1)!
+		                      3! = 3(3-1)!
+		                     		   2! = 2(2-1)!
+		                     		  		    1! = 1(1-0)!
+	</code></pre>
+
+	<p>As you can see, the (n-1)! portion of the function is where the recursion happens. The larger function (or 'task') continues to get smaller into subtasks until we achieve 1!. However, what happens when we get to 1!? This is where our base case gets involved. Since we don't want this to become an infinite loop, we set the base case to equal = 1 to end the loop.</p>
+
+	<div id="footer">
+		<a href="mailto:tran.yentran@gmail.com">contact me</a>
+	</div>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
